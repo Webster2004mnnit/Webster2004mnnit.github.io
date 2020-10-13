@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require_once('database.php');
 class User{
 private $name="";
@@ -8,14 +8,10 @@ private $password="";
 private $age="";
 private $phone="";
 private $city="";
-private $registered=false;
-private $loggedin=false;
-function __construct()
-{
+ public $registered=false;
+public $loggedin=false;
 
-$this->db = new database;
-$this->conn=$this->db->dbconnect('web');
-}
+
 
 function init($name,$username,$email,$password,$age,$phone,$city)
 {
@@ -25,7 +21,7 @@ $this->password=$password;
 $this->age=$age;
 $this->phone=$phone;
 $this->city=$city;
-$this->username=$city;
+$this->username=$username;
 
 
 }
@@ -69,6 +65,8 @@ function register()
 $q1="create table if not exists info ( uid SERIAL, name VARCHAR(50),username VARCHAR(50), email VARCHAR(50), password VARCHAR(50), age INT(3), phone VARCHAR(20), city VARCHAR(15), PRIMARY
 KEY(uid));";
 $q2 = "insert into info(name,username,email,password,age,phone,city) VALUES('$this->name','$this->username','$this->email','$this->password','$this->age','$this->phone','$this->city')";
+$this->connect();
+var_dump($q2);
 mysqli_query($this->conn,$q1);
 return mysqli_query($this->conn,$q2);
 
@@ -78,6 +76,8 @@ return mysqli_query($this->conn,$q2);
 function login($username,$password)
 {
 $query="SELECT * FROM info WHERE username = '$username' AND password ='$password';";
+$this->connect();
+
 $result=mysqli_query($this->conn,$query);
 if($result->num_rows!=0)
 	{
@@ -90,14 +90,48 @@ if($result->num_rows!=0)
 else return false;
 }
 
+function connect()
+{
+
+$this->db = new database();
+$this->conn=$this->db->dbconnect('web');
+
+}
+function getinfo()
+{
+
+return array($this->name,$this->username,$this->email,$this->age,$this->phone,$this->city);
 
 
 }
 
-//$u1 = new User("durgesh","kumar","pass","34","45555","ddf");
-//$u1->register();
-//echo("succes");
 
+function logout()
+{
+
+$this->username=null;
+$this->name=null;
+$this->password=null;
+$this->age=null;
+$this->phone=null;
+$this->city=null;
+$this->email=null;
+$this->setloggedin(false);
+}
+
+
+}
+
+$u1 = new User();
+/*$u1->init("durgesh","kumar","email","pass","34","45555","ddf");
+var_dump($u1->login("kumar","pass"));
+var_dump($u1->getinfo());
+var_dump($u1->logout());
+var_dump($u1->getinfo());
+var_dump($u1->isloggedin());
+
+echo("succes");
+*/
 
 
 
