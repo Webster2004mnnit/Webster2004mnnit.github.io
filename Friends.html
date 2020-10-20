@@ -23,6 +23,16 @@
     a:hover{
       text-decoration: solid;
     }
+    .heading-Box{
+      font-size: 25px;
+      font-family:'Times New Roman', Times, serif;
+      text-align:center;
+      background-color: #00244a;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      height:50px;
+  }
+
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -51,7 +61,7 @@
                 Friends
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="Friends.html">Friends</a>
+                <a class="dropdown-item active" href="Friends.html">Friends</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Chat</a>
                 
@@ -77,11 +87,11 @@
     
 
     
-        <div class=" bg-light rounded mt-3 p-2" style="width:400px; height:350px;">
+        <div class=" bg-light rounded mt-3 p-2 shadow-lg" style="width:400px; height:350px;">
             <div ><center><h2><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-plus-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7.5-3a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
             </svg> Friend Requests</h2></center></div>
-       <div style="width=400px; height:300px;" class="overflow-auto ">
+       <div  class="overflow-auto ">
         <table class="friend-request-list table-hover table ">
          <tr style="height:50px;" ><td ><span class="rounded-circle overflow-auto " width="40px" height="40px"><img src="background2.jpg" width="40px" height="40px" class="img-fluid rounded-circle mr-2 "></span>Abhishek</td><td><button class="btn btn-primary btn-sm mr-2">Confirm</button><button class="btn btn-outline-danger btn-sm">Delete</button></td></tr>
          <tr style="height:50px;"><td><img src="background2.jpg" width="40px" height="40px" class="img-fluid rounded-circle mr-2">Abhishek </td> <td><button class="btn btn-primary btn-sm mr-2">Confirm</button><button class="btn btn-outline-danger btn-sm">Delete</button></td></tr>
@@ -95,7 +105,8 @@
        
     
          <!-- friend list -->
-       <div class="container mt-3" id="Inner-box" style="width:600px; height:800px;" >
+         
+       <div class="container mt-3 shadow-lg" id="Inner-box" style="width:600px; height:800px;" >
         <div class="container-fluid shadow-lg rounded bg-dark "><center><p class="text-light" style="font-size:25px">Friends <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-lines-fill text-primary" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7 1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm2 9a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
         </svg></p></center></div>
@@ -134,16 +145,17 @@
        </tbody>
         </table>
        </div>
+      
        <!-- friend list -->
 
        <!-- sent request -->
-       <div class="bg-light  overflow-auto p-3 mt-3" style="width:400px; height:350px;">
+       <div class="bg-light  overflow-auto p-3 mt-3 shadow-lg" style="width:400px; height:350px;">
         <div ><center><h3>Sent requests 
           <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
           <path fill-rule="evenodd" d="M4 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5A.5.5 0 0 0 4 8z"/>
         </svg></h3></center></div>
-       <div class="overflow-auto">
+       <div class= " overflow-auto">
         <table class="table  table-hover">
             <tr><td>
                <a href="#" class="text-dark"><p><img src="background2.jpg" width="40px" height="40px" class="img-fluid rounded-circle mr-2">Person name</p></a> 
@@ -158,7 +170,60 @@
       </div>
       <button class="btn btn-warning">Add Friends</button>
     </div>
-    <!-- sent requests -->
+    <!-- sent requests -->  
+</div>
+<br>
+<div class="container ">
+<!-- suggestions -->
+<div class=" container text-light heading-Box"><p >Suggestions</p></div>
+<div class="container shadow-lg bg-light overflow-auto suggest" style="height: 600px;">
+<table class="table table-hover">
+    <tr>
+        <a href="#"><td><img src="background2.jpg" class="img-fluid rounded-circle" width="30px" height="30px"></td>
+         <td><a href="#" class="text-dark"><p >Gaming Name</a></p></td> 
+         <td><a href="#"><button class="btn btn-outline-primary">Send Request <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-plus-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+             <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7.5-3a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+           </svg></button></a></td>
+     </tr>
+<tr>
+    <a href="#"><td><img src="background2.jpg" class="img-fluid rounded-circle" width="30px" height="30px"></td>
+     <td><a href="#" class="text-dark"><p >Gaming Name</a></p></td> 
+     <td><a href="#"><button class="btn btn-outline-primary">Send Request <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-plus-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+         <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7.5-3a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+       </svg></button></a></td>
+ </tr>
+<tr>
+    <a href="#"><td><img src="background2.jpg" class="img-fluid rounded-circle" width="30px" height="30px"></td>
+     <td><a href="#" class="text-dark"><p >Gaming Name</a></p></td> 
+     <td><a href="#"><button class="btn btn-outline-primary">Send Request <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-plus-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+         <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7.5-3a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+       </svg></button></a></td>
+ </tr>
+ <tr>
+    <a href="#"><td><img src="background2.jpg" class="img-fluid rounded-circle" width="30px" height="30px"></td>
+     <td><a href="#" class="text-dark"><p >Gaming Name</a></p></td> 
+     <td><a href="#"><button class="btn btn-outline-primary">Send Request <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-plus-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+         <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7.5-3a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+       </svg></button></a></td>
+ </tr>
+ <tr>
+    <a href="#"><td><img src="background2.jpg" class="img-fluid rounded-circle" width="30px" height="30px"></td>
+     <td><a href="#" class="text-dark"><p >Gaming Name</a></p></td> 
+     <td><a href="#"><button class="btn btn-outline-primary">Send Request <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-plus-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+         <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7.5-3a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+       </svg></button></a></td>
+ </tr>
+ <tr>
+    <a href="#"><td><img src="background2.jpg" class="img-fluid rounded-circle" width="30px" height="30px"></td>
+     <td><a href="#" class="text-dark"><p >Gaming Name</a></p></td> 
+     <td><a href="#"><button class="btn btn-outline-primary">Send Request <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-plus-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+         <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7.5-3a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+       </svg></button></a></td>
+ </tr>
+</table>
+</div>
+<br>
+<br>
 </div>
 </diV>
       <!-- footer -->
