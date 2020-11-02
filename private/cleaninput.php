@@ -20,7 +20,7 @@ return $value;
 
 function isclean($value){
 
-if($value===cleaninput($value)&&$value!=="")
+if($value===cleaninput($value)||$value=="")
 {return True;}
 else{return false; }
 

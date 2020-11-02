@@ -1,7 +1,7 @@
-﻿<?php
+<?php
 class database {
-
-private $pass="";
+ 
+private $pass="durgesh";
 private $uname="root";
 private $host ="localhost";
 public function dbconnect($dbname)
