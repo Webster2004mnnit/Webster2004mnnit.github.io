@@ -1,4 +1,3 @@
-
 <?php SESSION_START();
 require_once('private/user.php');
 require_once('private/Aduser.php');
@@ -58,12 +57,15 @@ $photo = "profiles/". $Aduser1->getDetails("pphoto") ;
     label{
         font-size: 18px;
     }
+    #nav-c{
+      background:linear-gradient(to right,rgb(95, 183, 218) ,purple ); 
+    }
    </style>
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
 <body style=" background-color: #DCDCDC;">
 <div class="Box">
-    <div class="container-fluid overflow-auto  bg-info"  >
+    <div class="container-fluid overflow-auto  " id="nav-c"  >
         <center><p class="text-white " id="head" style="font-family: 'Galada',Cursive;">TheGamer'sZone</p></Center>
     </div>
     <br>
